@@ -1,0 +1,204 @@
+/* White theme override */
+:root {
+    --page-bg: #ffffff;
+    --surface-bg: #ffffff;
+    --surface-border: #e5e7eb;
+    --text-main: #111827;
+    --text-dark: #111827;
+    --text-muted: #6b7280;
+}
+
+html,
+body,
+.landing-shell,
+.landing-page,
+.hero-card,
+.hero-overlay,
+.pb-showcase,
+.pb-photo-shell,
+.pb-panel-inner,
+.hero-form,
+.hero-footer,
+.pb-policy-wrapper,
+.pb-policy-container,
+.pb-policy-card,
+.pb-policy-sidebar,
+.dashboard-shell,
+.stat-card,
+.dashboard-panel,
+.dress-entry-panel,
+.dress-detail-panel,
+.dress-card,
+.dress-card-media,
+.dress-detail-media,
+.empty-card,
+.trashed-card,
+.profile-panel,
+.profile-panel-primary,
+.profile-info-card,
+.profile-stat-card {
+    background: #ffffff !important;
+    background-image: none !important;
+}
+
+body,
+.hero-content,
+.eyebrow,
+.hero-copy,
+.pb-copy-block p,
+.pb-copy-block h2,
+.footer-tagline,
+.footer-link,
+.footer-brand,
+.footer-copy,
+.dashboard-shell,
+.dashboard-kicker,
+.dashboard-heading,
+.panel-header h3,
+.dress-detail-block h2,
+.stat-card p,
+.stat-card span,
+.stat-card strong,
+.dress-card-copy strong,
+.dress-card-copy span,
+.dress-card-copy p,
+.tag-chip,
+.tag-chip-muted,
+.dress-field span,
+.dress-checkbox span,
+.dress-field input,
+.dress-field select,
+.dress-field textarea,
+.dress-field input::placeholder,
+.dress-field textarea::placeholder,
+.dress-detail-meta span,
+.profile-subtitle,
+.profile-info-card span,
+.profile-stat-card span,
+.profile-info-card strong,
+.profile-stat-card strong,
+.pb-policy-container,
+.pb-policy-title,
+.pb-policy-meta,
+.pb-policy-intro,
+.pb-policy-section-title,
+.pb-legal-content,
+.pb-toc-heading,
+.pb-toc-link,
+.pb-back-to-top {
+    color: #111827 !important;
+}
+
+.hero-overlay {
+    display: none !important;
+}
+
+.pb-legal-content{
+    font-size: 16px;
+    font-weight: 100;
+}
+.hero-card,
+.pb-showcase,
+.pb-photo-shell,
+.pb-panel-inner,
+.pb-policy-card,
+.pb-policy-sidebar,
+.stat-card,
+.dashboard-panel,
+.dress-entry-panel,
+.dress-detail-panel,
+.dress-card,
+.empty-card,
+.trashed-card,
+.profile-panel,
+.profile-info-card,
+.profile-stat-card,
+.dress-field input,
+.dress-field select,
+.dress-field textarea,
+.pb-field input {
+    border: 1px solid var(--surface-border) !important;
+    box-shadow: none !important;
+}
+
+.landing-shell,
+.landing-page,
+.hero-footer,
+.dashboard-shell,
+.pb-policy-wrapper {
+    background: #ffffff !important;
+}
+
+.pb-button-top,
+.pb-button-form,
+.dashboard-button,
+.dashboard-button-primary,
+.dashboard-button-secondary,
+.dashboard-button-danger {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid var(--surface-border) !important;
+    box-shadow: none !important;
+}
+
+.pb-button-top {
+    background: #48c264 !important;
+    color: #ffffff !important;
+    border-color: #48c264 !important;
+}
+
+.pb-button-top .pb-icon,
+.pb-button-top .button-text {
+    color: inherit !important;
+}
+
+.pb-button-top .pb-icon {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.24) !important;
+}
+
+.pb-button-top .pb-icon svg,
+.pb-button-top .pb-icon path,
+.pb-button-top .pb-icon circle,
+.pb-button-top .pb-icon line {
+    color: #ffffff !important;
+    stroke: currentColor !important;
+}
+
+.pb-icon,
+.pb-button-form .pb-icon,
+.profile-avatar,
+.dress-thumb-fallback,
+.dress-thumb-fallback-large {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid var(--surface-border) !important;
+}
+
+.pb-badge-bottom,
+.tag-chip,
+.tag-chip-muted,
+.dress-detail-meta span {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid var(--surface-border) !important;
+    box-shadow: none !important;
+}
+
+.footer-brand {
+    opacity: 0.12;
+}
+
+.pb-policy-header,
+.pb-back-to-top-wrapper {
+    border-color: var(--surface-border) !important;
+}
+
+/* 6. Sidebar / Table of Contents */
+.pb-policy-sidebar {
+    padding: 20px;
+    position: sticky;
+    top: 120px;
+}
+
+

@@ -1,0 +1,14 @@
+@import './base/tailwind.css';
+@import './base/foundation.css';
+@import './layout/hero.css';
+@import './pages/pricing.css';
+@import './pages/auth.css';
+@import './layout/footer.css';
+@import './components/auth-utilities.css';
+@import './pages/privacy-policy.css';
+@import './themes/light-overrides.css';
+@import './pages/wardrobe-dashboard.css';
+@import './pages/reviews.css';
+@import './pages/dresses.css';
+@import './pages/queues.css';
+@import './vendor/select2.css';

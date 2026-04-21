@@ -1,0 +1,200 @@
+.landing-shell {
+    padding: 8px;
+    background: transparent; 
+}
+
+.landing-page {
+    min-height: calc(100vh - 16px);
+    display: grid;
+    place-items: center;
+    background: transparent;
+}
+
+.hero-card {
+    --hero-radius: 14px;
+    position: relative;
+    z-index: 0;
+    width: min(100%, 1410px);
+    height: min(96vh, 850px);
+    overflow: hidden;
+    border-radius: var(--hero-radius);
+    border: 0;
+    background:
+        var(--hero-bg-tint, linear-gradient(180deg, rgba(55, 30, 22, 0.08), rgba(38, 20, 17, 0.2))),
+        var(--hero-bg-image) center center / cover no-repeat;
+    box-shadow: none;
+    isolation: isolate;
+    transition: background 260ms ease;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+}
+
+.hero-card,
+.hero-card * {
+    font-family: var(--font-sans);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.hero-overlay {
+    background: var(
+        --hero-overlay,
+        linear-gradient(180deg, rgba(35, 18, 16, 0.1) 0%, rgba(36, 17, 14, 0.22) 42%, rgba(22, 10, 9, 0.52) 100%)
+    );
+    transition: opacity 220ms ease;
+}
+
+.pb-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 0;
+    border-radius: 14px;
+    font-weight: 400 !important;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.pb-button:hover {
+    transform: translateY(-1px);
+}
+
+.pb-button:focus-visible,
+.pb-back-link:focus-visible,
+.pb-field input:focus-visible {
+    outline: 3px solid rgba(72, 187, 120, 0.24);
+    /* outline-offset: 2px; */
+}
+
+.pb-button-top {
+    height: 40px;
+    padding: 0 11px 0 14px;
+    background: var(--green-button);
+    color: #fff;
+    font-size: 0.76rem;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.24),
+        0 10px 24px rgba(43, 131, 83, 0.18);
+}
+
+.pb-button-top .pb-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.pb-button-form {
+    min-width: 144px;
+    height: 48px;
+    padding: 0 16px 0 18px;
+    background: var(--yellow-button);
+    color: #23311a;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.52),
+        0 10px 24px rgba(78, 62, 10, 0.18);
+}
+
+.pb-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.pb-button-form .pb-icon {
+    background: rgba(255, 255, 255, 0.32);
+}
+
+
+.pb-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 860px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 200px 24px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.hero-body {
+    position: relative;
+    height: 100%;
+    z-index: 3;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-card.pb-active {
+    background:
+        linear-gradient(180deg, rgba(242, 240, 236, 0.96), rgba(245, 243, 239, 0.98)),
+        var(--hero-pb-image) left center / 52% auto no-repeat,
+        #f4f1ec;
+}
+
+.hero-card.pb-active .hero-overlay {
+    opacity: 0;
+}
+
+.hero-scroll {
+    min-height: 0;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 24px 0;
+    scrollbar-gutter: stable;
+    flex: 1;
+}
+
+.eyebrow {
+    display: block;
+    margin: 0 0 12px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(243, 248, 238, 0.82);
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: clamp(3.2rem, 5.6vw, 6.2rem);
+    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    text-wrap: balance;
+}
+
+.hero-title-normal {
+    letter-spacing: 0em !important;
+}
+
+.hero-copy {
+    width: 500px;          /* fixed width */
+    margin: 18px auto 0;   /* fixed spacing */
+    font-size: 18px;       /* fixed font size */
+    line-height: 1.45;
+    font-weight: 500;
+    color: rgba(243, 247, 239, 0.88);
+}
+

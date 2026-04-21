@@ -1,0 +1,825 @@
+.dresses-container {
+    padding: 18px 20px 0;
+}
+
+.dresses-page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 0 22px;
+    position: relative;
+}
+
+.dresses-page-copy {
+    max-width: 560px;
+    text-align: left;
+    margin: 0;
+}
+
+.dresses-page-kicker {
+    margin: 16px 0 4px;
+    color: #48c264;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.dresses-page-copy h2 {
+    margin: 0;
+    color: #163129;
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.dresses-page-tagline {
+    margin: 8px 0 0;
+    color: #4b5563;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+.dresses-page-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.dresses-page-delete-link {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d7dfda;
+    border-radius: 10px;
+    color: #163129;
+    text-decoration: none;
+    background: #ffffff;
+}
+
+.dresses-page-delete-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 720px) {
+    .dresses-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dresses-page-actions {
+        margin-left: 0;
+    }
+}
+
+.dresses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.dresses-empty-state {
+    grid-column: 1 / -1;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #4b5563;
+    font-size: 1rem;
+    gap: 10px;
+    position: relative;
+    overflow: visible;
+    transform: translateY(-10px);
+}
+
+.dresses-empty-state p {
+    margin: 0;
+    position: relative;
+    top: -100px;
+}
+
+.dresses-empty-arrow {
+    position: absolute;
+    top: -130px;
+    width: 280px;
+    height: 210px;
+    transform: translateX(380px);
+    pointer-events: none;
+}
+
+.dresses-empty-arrow path {
+    fill: none;
+    stroke: #48c264;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dress-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    height: 100%;
+}
+
+.dress-card-media {
+    position: relative;
+}
+
+.dress-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.dress-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.dress-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+.dress-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 0;
+    margin-top: -25px;
+}
+
+.dress-card-copy {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+    min-width: 0;
+    width: 100%;
+}
+
+.dress-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+    width: 100%;
+    min-width: 0;
+}
+
+.dress-card-copy p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.dress-card-copy h3 {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.dress-card-copy p + p {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: -2px;
+}
+
+.dress-card-copy p,
+.dress-card-copy span,
+.dress-card-copy strong {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.dress-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.dress-card-actions form {
+    margin: 0;
+}
+
+.dress-card-action {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    background: #fff;
+    color: #163129;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dress-card-action svg {
+    width: 16px;
+    height: 16px;
+}
+
+.dress-card-action-delete {
+    color: #b42318;
+}
+
+.dress-delete-dialog {
+    border: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.dress-delete-dialog::backdrop {
+    background: rgba(17, 24, 39, 0.26);
+}
+
+.dress-delete-dialog-card {
+    width: min(320px, calc(100vw - 32px));
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+}
+
+.dress-delete-dialog-title {
+    margin: 0 0 6px;
+    color: #111827;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.dress-delete-dialog-copy {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.dress-delete-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.dress-card-image-placeholder {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: #f3f4f6;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.dress-size-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(17, 24, 39, 0.82);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dresses-pagination-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 28px;
+}
+
+.dresses-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.dresses-pagination-meta {
+    color: #4b5563;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.dresses-pagination-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.dresses-pagination-link,
+.dresses-pagination-ellipsis {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.dresses-pagination-link {
+    border: 1px solid #d7e1dc;
+    color: #163129;
+    background: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.dresses-pagination-link:hover {
+    color: #163129;
+    background: transparent;
+    border-color: #c3e4ce;
+}
+
+.dresses-pagination-link.is-active {
+    color: #ffffff;
+    background: #48c264;
+    border-color: #48c264;
+    box-shadow: none;
+}
+
+.dresses-pagination-link.is-disabled {
+    color: #9ca3af;
+    background: transparent;
+    border-color: #e5e7eb;
+    cursor: not-allowed;
+}
+
+.dresses-pagination-ellipsis {
+    color: #6b7280;
+}
+
+@media (max-width: 640px) {
+    .dresses-pagination-wrap {
+        justify-content: center;
+    }
+
+    .dresses-pagination {
+        justify-content: center;
+    }
+
+    .dresses-pagination-meta {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dresses-pagination-links {
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+    }
+}
+
+/* --- Layout Containers --- */
+.product-creation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfcfc;
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px; /* Form on left, Preview on right */
+    gap: 40px;
+    align-items: start;
+}
+
+/* --- Stepper Navigation --- */
+.stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+.step.active {
+    color: #2d2d2d;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+}
+
+.step.completed {
+    color: #4CAF50;
+}
+
+/* --- Form Styling --- */
+.form-panel {
+    background: #fff;
+    padding: 10px;
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.icon-info {
+    background: #d1d1d1;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.form-section {
+    margin: 20px 0;
+}
+
+.form-section label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.field-hint {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.full-width-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.generated-code {
+    display: flex;
+    justify-content: space-between;
+    background: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px dashed #e0e0e0;
+    margin: 30px 0;
+}
+
+/* --- Sizes & Variants --- */
+.size-chips {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.chip.active {
+    background-color: #e8f5e9;
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.variant-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.color-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.btn-add-variant {
+    color: #4CAF50;
+    background: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+/* --- Preview Card (Right Side) --- */
+.preview-panel {
+    position: sticky;
+    top: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    padding: 15px;
+}
+
+.image-wrapper {
+    background: #f5f5f5;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #ff4d4d;
+}
+
+.card-details h3 {
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-buy {
+    width: 100%;
+    background: #2d2d2d;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* --- Header Actions --- */
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-save {
+    background-color: #4CAF50 !important;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration-color: #ffffff;
+}
+
+.btn-outline {
+    border: 1px solid #e0e0e0;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.btn-delete {
+    color: #999;
+    background: none;
+    border: none;
+    margin-right: 10px;
+}
+
+.product-preview-shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card-preview {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 260px;
+}
+
+.product-card-preview img {
+    width: 100%;
+    border-radius: 0.8rem;
+}
+
+.preview-details h3 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.preview-colors {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.preview-colors span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.size-chips {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.chip {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.chip.active {
+    background: #48c264;
+    color: white;
+}
+
+.variant-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.color-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+/* 🔷 Wrapper */
+.ts-wrapper {
+    font-family: inherit;
+}
+
+/* 🔷 Main control */
+.ts-control {
+    min-height: 42px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+/* 🔷 Hover */
+.ts-control:hover {
+    border-color: #d1d5db;
+}
+
+/* 🔷 Focus (🔥 important for clean feel) */
+.ts-wrapper.focus .ts-control {
+    border-color: #48c264;
+    box-shadow: 0 0 0 3px rgba(72, 194, 100, 0.15);
+}
+
+/* 🔷 Input text */
+.ts-control input {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🔷 Selected item */
+.ts-control .item {
+    font-size: 14px;
+    padding: 2px 4px;
+    color: #111827;
+}
+
+/* 🔷 Placeholder */
+.ts-control .placeholder {
+    color: #9ca3af;
+}
+
+/* 🔷 Dropdown */
+.ts-dropdown {
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* 🔷 Dropdown options */
+.ts-dropdown .option {
+    padding: 10px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 🔷 Hover option */
+.ts-dropdown .option:hover {
+    background: #f9fafb;
+}
+
+/* 🔷 Active (keyboard hover) */
+.ts-dropdown .active {
+    background: rgba(72, 194, 100, 0.1);
+    color: #065f46;
+}
+
+/* 🔷 Remove ugly default arrow spacing */
+.ts-control::after {
+    margin-right: 4px;
+}

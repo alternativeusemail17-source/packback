@@ -1,0 +1,339 @@
+/* Common pb-button styles */
+.pb-button.pb-button-top {
+    height: 42px;
+    padding: 0 13px 0 16px;
+    font-size: 0.84rem;
+    background: #48c264;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* space between text and icon */
+    border-radius: 4px; /* optional, adjust if needed */
+}
+
+.pb-button.pb-button-red {
+    height: 42px;
+    padding: 0 13px 0 16px;
+    font-size: 0.84rem;
+    background: #E63946;
+    color: #ffffff;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+}
+
+/* Text inside the button */
+.pb-button.pb-button-top .button-text,
+.pb-button.pb-button-red .button-text {
+    font-weight: 400;
+}
+
+/* Icon inside the button */
+.pb-button.pb-button-top .pb-icon,
+.pb-button.pb-button-red .pb-icon {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Password strength bar container */
+#password-strength-bar {
+    height: 6px;
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-top: 4px;
+    display: none; /* initially hidden */
+}
+
+/* Password strength fill */
+#password-strength-fill {
+    height: 100%;
+    width: 0%; /* updated dynamically via JS */
+    background: #48c264;
+    border-radius: 4px;
+    transition: width 0.3s;
+}
+.pb-account-link {
+    margin-bottom: 0;
+    font-size: 0.85rem;         /* text size */
+    text-align: left;            /* left-aligned text */
+    color: #18311f;              /* default text color */
+}
+
+
+
+.pb-account-link a {
+    color: #48c264;              /* link color */
+    font-weight: 500;            /* slightly bold */
+    text-decoration: none;       /* optional, add underline if needed */
+}
+
+.pb-account-link a:hover {
+    text-decoration: underline;  /* hover effect */
+}
+.rotated-icon {
+    transform: rotate(180deg);
+    display: inline-block; /* ensures transform works correctly */
+}
+.pb-form-heading {
+    letter-spacing: -1px !important; /* adjust as needed */
+    font-size: 1rem;       /* keep your heading size */    /* optional, adjust if needed */
+}
+
+/* Container for remember & forgot password */
+.pb-login-options {
+    display: flex;
+    justify-content: space-between; /* Forgot Password left, Remember Me right */
+    align-items: center;
+    width: 100%;
+    grid-column: 1 / -1;
+    align-self: flex-start;
+}
+
+/* Remember Me checkbox label */
+.pb-remember {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #18311f;
+    cursor: pointer;
+}
+
+.pb-remember input[type="checkbox"] {
+    margin-right: 6px; /* spacing between checkbox and text */
+}
+
+/* Forgot Password link */
+.pb-forgot-password {
+    font-size: 0.85rem;
+    color: #48c264;
+    text-decoration: none;
+}
+
+.pb-forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Container already defined as flex */
+.pb-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #18311f;
+    position: relative;
+}
+
+/* Hide default checkbox */
+.pb-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.pb-slider {
+    position: relative;
+    width: 36px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 18px;
+    transition: 0.3s;
+    margin-right: 8px;
+}
+
+/* The circle inside slider */
+.pb-slider::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 1px;
+    top: 1px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* Toggle checked state */
+.pb-toggle input:checked + .pb-slider::before {
+    transform: translateX(18px); /* moves the circle */
+}
+
+.pb-toggle input:checked + .pb-slider {
+    background-color: #48c264; /* active color */
+}
+
+/* Label text next to toggle */
+.pb-toggle-label {
+    margin-left: 4px;
+}
+
+.pb-account-legal-row {
+    display: flex;
+    gap: 16px;          /* space between the two lines */
+    flex-wrap: wrap;    /* allows wrapping on small screens */
+    align-items: center; /* vertical alignment */
+}
+
+/* Optional: remove previous flex rules */
+.pb-account-legal-row {
+    display: block !important;
+    gap: 0 !important;
+}
+
+.pb-account-link, 
+.pb-legal, 
+.pb-submit {
+    grid-column: 1 / -1; /* Spans across both columns */
+    justify-self: start; /* Forces left alignment */
+    width: auto;         /* Prevents the button from stretching if not desired */
+}
+
+.pb-field span.pb-error {
+    font-weight: 300px;
+    font-size: 12px;
+    color: #d15f4f;
+}
+.pb-global-error {
+    font-weight: 300px;
+    font-size: 14px;
+    color: #d15f4f;
+}
+
+
+
+/* Card Container */
+.pb-card {
+    max-width: 480px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1f2937;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Styles */
+.pb-icon-circle {
+    width: 40px;
+    height: 40px;
+    background: #f9fafb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.lightning-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Typography */
+.pb-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.pb-text {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 24px;
+}
+
+/* The OTP Code Box */
+.pb-code-wrapper {
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.pb-code-text {
+    font-family: "SF Mono", "Courier New", monospace;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.pb-copy-btn {
+    position: absolute;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.pb-copy-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.pb-copy-btn:hover {
+    color: #4b5563;
+}
+
+/* Footer & Expiry */
+.pb-expiry {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.pb-footer {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 24px;
+}
+
+/* Optional slide-in animation */
+@keyframes slide-in {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slide-in {
+    animation: slide-in 0.3s ease-out forwards;
+}
+
+#toast-success {
+    background-color: white;
+    color: #16a34a; 
+    padding: 0.5rem 1rem; 
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50;
+    opacity: 0;
+    transform: translateY(50px);   
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Fade in and move up */
+#toast-success.show {
+    opacity: 1;
+    transform: translateY(0px);      /* move up into position */
+}
+

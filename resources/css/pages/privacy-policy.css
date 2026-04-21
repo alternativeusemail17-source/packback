@@ -1,0 +1,717 @@
+/* --- PackBack Privacy Policy Layout --- */
+
+/* 1. Main Wrapper: Overrides parent grid to force centering */
+.pb-policy-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    min-height: 100vh;
+    padding-top: 0 !important;
+    background: transparent;
+    grid-template-columns: 1fr !important; /* Disables sidebars if layout uses them */
+}
+
+/* 2. Main Container: Constrains width and centers itself */
+.pb-policy-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* 3. Header Section: Centered text and metadata */
+.pb-policy-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 50px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pb-policy-title {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin: 10px 0 0 0;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.pb-policy-meta {
+    font-size: 0.95rem;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 4. Grid Layout: 2-column for desktop, 1-column for mobile */
+.pb-policy-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 80px;
+    align-items: start;
+    width: 100%;
+}
+
+/* 5. Typography & Content */
+.pb-policy-intro {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-wrap: balance;
+}
+
+.pb-policy-section-title {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 30px 0 25px 0;
+}
+
+.pb-policy-card {
+    margin-bottom: 30px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.hero-content-compact {
+    min-height: auto;
+    padding-bottom: 28px;
+}
+
+.dresses-index-page .hero-content {
+    max-width: 1180px;
+    margin: 0; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding-top: 25px;
+    padding-bottom: 28px;
+    padding-left: 30px;
+}
+
+.dresses-index-page .dresses-index-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.dresses-index-page .dresses-index-hero-copy {
+    max-width: 520px;
+}
+
+.dresses-index-page .dresses-index-add-button {
+    margin-left: auto;
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+.dresses-index-page .eyebrow {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    text-align: left; /* force left alignment */
+}
+
+.dresses-index-page .hero-content h1 {
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    line-height: 1.08;
+    text-align: left; /* ensure heading stays left-aligned */
+}
+
+.dresses-index-page .hero-copy {
+    width: min(100%, 520px);
+    margin: 10px 0 0;
+    font-size: 0.98rem;
+    text-align: left; /* ensure paragraph stays left-aligned */
+    padding-left: 0; /* remove any internal left padding */
+}
+
+.dresses-index-page .dashboard-shell {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 24px;
+}
+
+.dashboard-shell {
+    width: min(100%, 1180px);
+    margin: 0 auto;
+    padding: 0 24px 56px;
+    color: #f7fbf6;
+}
+
+.dashboard-toolbar,
+.panel-header,
+.dashboard-panels,
+.stats-grid,
+.dress-grid,
+.dress-form-grid,
+.dress-detail-panel,
+.trashed-list {
+    width: 100%;
+}
+
+.dashboard-toolbar,
+.panel-header,
+.trashed-card,
+.dress-card-actions,
+.dress-form-actions,
+.dress-detail-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.dashboard-toolbar {
+    margin-bottom: 24px;
+}
+
+.dashboard-kicker {
+    margin: 0 0 8px;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(243, 248, 238, 0.7);
+}
+
+.dashboard-heading,
+.panel-header h3,
+.dress-detail-block h2 {
+    margin: 0;
+    letter-spacing: -0.04em;
+}
+
+.dashboard-heading {
+    max-width: 720px;
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.stat-card,
+.dashboard-panel,
+.dress-entry-panel,
+.dress-detail-panel {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(14, 28, 22, 0.42);
+    backdrop-filter: blur(14px);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(9, 18, 14, 0.18);
+}
+
+.stat-card {
+    padding: 22px;
+}
+
+.stat-card p,
+.stat-card span,
+.dress-card-copy span,
+.panel-count,
+.trashed-card span,
+.dress-detail-block p,
+.dress-card-copy p {
+    color: rgba(243, 248, 238, 0.76);
+}
+
+.stat-card p,
+.stat-card span,
+.dress-card-copy span,
+.dress-card-copy p,
+.trashed-card span {
+    margin: 0;
+}
+
+.stat-card strong {
+    display: block;
+    margin: 10px 0 8px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #ffffff;
+}
+
+.dashboard-panels {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.dashboard-panel,
+.dress-entry-panel {
+    padding: 24px;
+}
+
+.recent-dress-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dress-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-left: 0; /* flush to the left */
+    padding-left: 0; /* remove internal padding */
+    justify-content: start; /* ensures grid items start from left */
+}
+
+.dress-card {
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.dress-card-full {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+}
+
+.dress-card-media,
+.dress-detail-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 226, 185, 0.18), rgba(255, 255, 255, 0.04));
+}
+
+.dress-card-media {
+    min-height: 220px;
+}
+
+.dress-card-media img,
+.dress-detail-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dress-thumb-fallback {
+    display: grid;
+    place-items: center;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    background: rgba(246, 208, 79, 0.88);
+    color: #23311a;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.dress-thumb-fallback-large {
+    width: 150px;
+    height: 150px;
+    font-size: 3rem;
+}
+
+.dress-card-copy {
+    display: grid;
+    gap: 12px;
+    padding: 18px;
+}
+
+.dress-card-copy strong,
+.trashed-card strong {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.dress-meta-row,
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: rgba(246, 208, 79, 0.18);
+    color: #fff7d3;
+    font-size: 0.82rem;
+}
+
+.tag-chip-muted {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(243, 248, 238, 0.76);
+}
+
+.dashboard-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    padding: 0 16px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.dashboard-button-primary {
+    background: #f6d04f;
+    color: #22301d;
+}
+
+.dashboard-button-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.dashboard-button-danger {
+    background: rgba(188, 66, 54, 0.18);
+    border-color: rgba(237, 133, 124, 0.2);
+    color: #ffd0cb;
+}
+
+.welcome-actions {
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.filter-form,
+.dress-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.dress-field {
+    display: grid;
+    gap: 8px;
+}
+
+.dress-field-wide {
+    grid-column: 1 / -1;
+}
+
+.dress-field span,
+.dress-checkbox span {
+    font-size: 0.92rem;
+    color: rgba(243, 248, 238, 0.86);
+}
+
+.dress-field input,
+.dress-field select,
+.dress-field textarea {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    padding: 14px 16px;
+}
+
+.dress-field input::placeholder,
+.dress-field textarea::placeholder {
+    color: rgba(243, 248, 238, 0.48);
+}
+
+.dress-field select option {
+    color: #18311f;
+}
+
+.dress-field small {
+    color: #ffd0cb;
+}
+
+.dress-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dress-checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+.empty-card {
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(243, 248, 238, 0.76);
+}
+
+.form-shell {
+    padding-top: 0;
+}
+
+.dress-detail-panel {
+    display: grid;
+    grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+    gap: 24px;
+    padding: 24px;
+}
+
+.dress-detail-media {
+    min-height: 420px;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.dress-detail-copy {
+    display: grid;
+    gap: 18px;
+}
+
+.dress-detail-meta {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.dress-detail-meta span {
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(243, 248, 238, 0.84);
+    font-size: 0.85rem;
+}
+
+.dress-detail-block p {
+    line-height: 1.6;
+}
+
+.trashed-list {
+    display: grid;
+    gap: 12px;
+}
+
+.trashed-card {
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.profile-panel {
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(14, 28, 22, 0.42);
+    backdrop-filter: blur(14px);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(9, 18, 14, 0.18);
+}
+
+.profile-panel-primary {
+    background:
+        linear-gradient(135deg, rgba(246, 208, 79, 0.18), rgba(255, 255, 255, 0.04)),
+        rgba(14, 28, 22, 0.52);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.profile-avatar {
+    display: grid;
+    place-items: center;
+    width: 84px;
+    height: 84px;
+    border-radius: 24px;
+    background: #f6d04f;
+    color: #22301d;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.profile-subtitle {
+    margin: 8px 0 0;
+    color: rgba(243, 248, 238, 0.76);
+}
+
+.profile-info-grid,
+.profile-stat-grid,
+.profile-actions {
+    display: grid;
+    gap: 14px;
+}
+
+.profile-info-grid,
+.profile-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 22px;
+}
+
+.profile-info-card,
+.profile-stat-card {
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.profile-info-card span,
+.profile-stat-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(243, 248, 238, 0.72);
+}
+
+.profile-info-card strong,
+.profile-stat-card strong {
+    color: #ffffff;
+    font-size: 1.15rem;
+}
+
+.profile-stat-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.profile-actions .dashboard-button,
+.profile-actions form,
+.profile-actions form button {
+    width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-panels,
+    .stats-grid,
+    .dress-grid,
+    .recent-dress-grid,
+    .dress-detail-panel,
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .dress-card-full {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 780px) {
+    .dashboard-shell {
+        padding: 0 18px 40px;
+    }
+
+    .dashboard-toolbar,
+    .panel-header,
+    .trashed-card,
+    .dress-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-form,
+    .dress-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info-grid,
+    .profile-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dress-field-wide {
+        grid-column: auto;
+    }
+}
+
+/* 6. Sidebar / Table of Contents */
+.pb-policy-sidebar {
+    padding: 20px;
+    position: sticky;
+    top: 40px;
+}
+
+.pb-toc-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pb-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pb-toc-link {
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: all 0.2s ease;
+}
+
+.pb-toc-link:hover {
+    color: #48bb78 !important;
+    transform: translateX(5px);
+}
+
+.pb-back-to-top-wrapper {
+    margin-top: 45px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+}
+
+.pb-back-to-top {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pb-back-to-top:hover {
+    color: #ffffff;
+}
+
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 991px) {
+    .pb-policy-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .pb-policy-sidebar {
+        position: static;
+        order: -1; /* Puts TOC above text on mobile */
+        background: rgba(255, 255, 255, 0.02);
+        padding: 30px;
+        border-radius: 16px;
+    }
+
+    .pb-policy-container {
+        padding: 60px 20px;
+    }
+
+    .pb-policy-title {
+        font-size: 3.5rem;
+    }
+}
+
